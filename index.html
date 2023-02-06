@@ -1,17 +1,41 @@
 
-<body>   
-<audio id="a0"><source src="CorrectAnswer.mp3" /></audio>   
-<audio id="a1"><source src="OrchestraHit.mp3" /></audio>
-<audio id="a2"><source src="IdeaBell.mp3" /></audio>
-<audio id="a3"><source src="ClockTicking.mp3" /></audio>
+<body>
+<style>
+body {
+  background-image: url('bg_jungle.png');
+  background-size: 100% 100%;
+}
+.center {
+  padding: 100px 0;
+  text-align: center;
+}
+.center img:hover {
+  filter: hue-rotate(90deg);
+  filter: saturate(8);
+}
+</style>
 
-<div id="assessment">     
-<button id="b0">Correct Answer</button>   
-<button id="b1">Orchestra Hit</button>   
-<button id="b2">Idea Bell</button>   
-<button id="b3">Clock Ticking</button>   
+<audio id="a0"><source src="snd_snare.mp3" /></audio>   
+<audio id="a1"><source src="snd_bass.mp3" /></audio>
+<audio id="a2"><source src="snd_cymbal.mp3" /></audio>
+<audio id="a3"><source src="snd_bongo.mp3" /></audio>
+<audio id="a4"><source src="snd_fx1.mp3" /></audio>
+<audio id="a5"><source src="snd_fx2.mp3" /></audio>
+<audio id="a6"><source src="snd_fx3.mp3" /></audio>
+<audio id="a7"><source src="snd_fx4.mp3" /></audio>
+
+<div class="center">
+<img src="img_snare.png" id="b0" />
+<img src="img_bass.png" id="b1" />
+<img src="img_cymbal.png" id="b2" />
+<img src="img_bongo.png" id="b3" />
+<img src="img_banana.png" id="b4" />   
+<img src="img_pow.png" id="b5" />   
+<img src="img_donut.png" id="b6" />   
+<img src="img_tongue.png" id="b7" />   
 </div>
-</body>  
+
+</body>
 
 
 <script>
@@ -19,5 +43,8 @@ document.getElementById("b0").addEventListener("click", function(){ document.get
 document.getElementById("b1").addEventListener("click", function(){ document.getElementById("a1").play(); })  
 document.getElementById("b2").addEventListener("click", function(){ document.getElementById("a2").play(); })  
 document.getElementById("b3").addEventListener("click", function(){ document.getElementById("a3").play(); })  
-
+document.getElementById("b4").addEventListener("click", function(){ document.getElementById("a4").play(); })  
+document.getElementById("b5").addEventListener("click", function(){ document.getElementById("a5").play(); })  
+document.getElementById("b6").addEventListener("click", function(){ document.getElementById("a6").play(); })  
+document.getElementById("b7").addEventListener("click", function(){ document.getElementById("a7").play(); })  
 </script>   
