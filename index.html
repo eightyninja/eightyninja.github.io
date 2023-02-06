@@ -1,0 +1,23 @@
+
+<body>   
+<audio id="a0"><source src="CorrectAnswer.mp3" /></audio>   
+<audio id="a1"><source src="OrchestraHit.mp3" /></audio>
+<audio id="a2"><source src="IdeaBell.mp3" /></audio>
+<audio id="a3"><source src="ClockTicking.mp3" /></audio>
+
+<div id="assessment">     
+<button id="b0">Correct Answer</button>   
+<button id="b1">Orchestra Hit</button>   
+<button id="b2">Idea Bell</button>   
+<button id="b3">Clock Ticking</button>   
+</div>
+</body>  
+
+
+<script>
+document.getElementById("b0").addEventListener("click", function(){ document.getElementById("a0").play(); })  
+document.getElementById("b1").addEventListener("click", function(){ document.getElementById("a1").play(); })  
+document.getElementById("b2").addEventListener("click", function(){ document.getElementById("a2").play(); })  
+document.getElementById("b3").addEventListener("click", function(){ document.getElementById("a3").play(); })  
+
+</script>   
