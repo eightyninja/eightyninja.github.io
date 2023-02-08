@@ -44,7 +44,7 @@ var instruments = new Object();
 function initAudio(instrument_id) {
   let audio = [];
   for (let i = 0; i < AUDIO_BUFFER; i++) {
-    var el = document.createElement('audio');
+    let el = document.createElement('audio');
     el.id = 'audio_' + instrument_id + '_' + i;
     el.src = 'snd_' + instrument_id + '.mp3';
     audio[i] = el;
