@@ -1,20 +1,30 @@
 <body>
+
 <style>
 body {
   background-image: url('bg_jungle.png');
   background-size: 100% 100%;
 }
-.center {
-  padding: 100px 0;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  height: 100%;
+}
+.grid-item {
   text-align: center;
 }
-.center img:hover {
+.grid-item > img {
+  object-fit: cover;
+  max-height: 30vh;
+}
+.grid-item > img:hover {
   filter: hue-rotate(90deg);
   filter: saturate(8);
 }
 </style>
 
-<div id="container" class="center"></div>
+<div class="grid-container" id="container"></div>
 </body>
 
 <script>
@@ -27,6 +37,8 @@ instruments = {
 }
 */
 
+const AUDIO_BUFFER = 10;
+
 var INSTRUMENT_IDS = [
   'snare',
   'bass',
@@ -35,8 +47,8 @@ var INSTRUMENT_IDS = [
   'banana',
   'pow',
   'donut',
-  'tongue']
-const AUDIO_BUFFER = 10;
+  'tongue',
+  'ball']
 
 var instruments = new Object();
 
@@ -46,19 +58,22 @@ function initAudio(instrument_id) {
   for (let i = 0; i < AUDIO_BUFFER; i++) {
     let el = document.createElement('audio');
     el.id = 'audio_' + instrument_id + '_' + i;
-    el.src = 'snd_' + instrument_id + '.mp3';
+    el.src = 'audio/snd_' + instrument_id + '.mp3';
     audio[i] = el;
   }
   instruments[instrument_id] = {'audio': audio, 'index': 0};
 }
 
 function initImage(instrument_id) {
-  let el = document.createElement("img");
-  el.id = 'image_' + instrument_id;
-  el.src = 'img_' + instrument_id + '.png';
-  el.addEventListener("touchstart", handleTouchstart);
-  el.addEventListener("mousedown", handleMousedown);
-  document.getElementById("container").appendChild(el);
+  let img = document.createElement("img");
+  img.id = 'image_' + instrument_id;
+  img.src = 'image/img_' + instrument_id + '.png';
+  img.addEventListener("touchstart", handleTouchstart);
+  img.addEventListener("mousedown", handleMousedown);
+  let div = document.createElement("div");
+  div.className = 'grid-item';
+  div.appendChild(img);
+  document.getElementById("container").appendChild(div);
 }
 
 function initInstrument(instrument_id) {
