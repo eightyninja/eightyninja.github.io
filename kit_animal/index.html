@@ -1,0 +1,45 @@
+<head>
+
+<script>
+var INSTRUMENT_IDS = [
+  'horse',
+  'chimpanzee',
+  'elephant',
+  'sheep',
+  'cat',
+  'dog',
+  'panda',
+  'pig',
+  'lion']
+</script>
+
+<style>
+body {
+  background-image: url('background.png');
+  background-size: 100% 100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  height: 100%;
+}
+.grid-item {
+  text-align: center;
+}
+.grid-item > img {
+  object-fit: cover;
+  max-height: 30vh;
+}
+.grid-item > img:hover {
+  filter: hue-rotate(90deg);
+  filter: saturate(8);
+}
+</style>
+
+</head>
+
+<body>
+<div class="grid-container" id="container"></div>
+<script src="../lib.js"></script>
+</body>
