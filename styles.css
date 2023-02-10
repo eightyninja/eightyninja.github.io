@@ -13,5 +13,5 @@
 }
 .grid-item > img:hover {
   filter: hue-rotate(90deg);
-  filter: saturate(8);
+  filter: contrast(200%);
 }
