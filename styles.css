@@ -1,0 +1,17 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  height: 100%;
+}
+.grid-item {
+  text-align: center;
+}
+.grid-item > img {
+  object-fit: cover;
+  max-height: 30vh;
+}
+.grid-item > img:hover {
+  filter: hue-rotate(90deg);
+  filter: saturate(8);
+}

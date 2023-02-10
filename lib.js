@@ -40,6 +40,8 @@ function initInstrument(instrument_id) {
 }
 
 function init() {
+  document.body.style.backgroundImage = 'url("background.png")';
+  document.body.style.backgroundSize = '100% 100%';
   for (let i = 0; i < INSTRUMENT_IDS.length; i++) {
     initInstrument(INSTRUMENT_IDS[i]);
   }
