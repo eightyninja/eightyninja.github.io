@@ -15,3 +15,11 @@
   filter: hue-rotate(90deg);
   filter: contrast(200%);
 }
+#controller {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#controller > img:hover {
+  filter: contrast(400%);
+}
