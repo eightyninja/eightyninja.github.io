@@ -20,6 +20,9 @@
   top: 0px;
   left: 0px;
 }
+#controller > img {
+  padding: 5px;
+}
 #controller > img:hover {
   filter: contrast(400%);
 }

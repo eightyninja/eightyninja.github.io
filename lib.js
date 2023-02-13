@@ -72,9 +72,10 @@ function initController() {
   let normal = document.createElement('img');
   normal.src = '../image/win_normal.png';
   normal.addEventListener('click', closeFullscreen);
-  document.getElementById('controller').appendChild(home);
-  document.getElementById('controller').appendChild(full);
-  document.getElementById('controller').appendChild(normal);
+  let controller = document.getElementById('controller');
+  controller.appendChild(home);
+  controller.appendChild(full);
+  controller.appendChild(normal);
 }
 
 function init() {
