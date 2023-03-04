@@ -12,31 +12,44 @@
   </head>
   <body>
   <style>
-  #title {
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 100;
-  }
   #menu {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  th {
+    background: #ccc;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background: #efefef;
+  }
+  tr:hover {
+    background: #d1d1d1;
+  }
+  img {
+    width: 70px
   }
   </style>
-  <div id="title">Percussion</div>
   <div id="menu">
-    <a href="kit_kitchen/index.html">kitchen</a> |
-    <a href="kit_funny/index.html">funny</a> |
-    <a href="kit_animal/index.html">animal</a> |
-    <a href="kit_dj/index.html">dj</a> |
-    <a href="kit_drum/index.html">drum</a> |
-    <a href="kit_tamori/index.html">tamori</a> |
-    <a href="kit_greeting/index.html">greeting</a> |
-    <a href="kit_scene1/index.html">scene1</a> |
-    <a href="kit_ttwister1/index.html">ttwister1</a>
+    <table>
+      <tr><td><a href="kit_kitchen/index.html"><img src="kit_kitchen/image/img_spoon.png"></a></td><td>Kitchenware sounds like forks, spoons, and knives</td></tr>
+      <tr><td><a href="kit_funny/index.html"><img src="kit_funny/image/img_horn.png"></a></td><td>Funny sounds like horn, kiss, and fart</td></tr>
+      <tr><td><a href="kit_animal/index.html"><img src="kit_animal/image/img_dog.png"></a></td><td>Animal sounds like dogs, cats, and elephants</td></tr>
+      <tr><td><a href="kit_dj/index.html"><img src="kit_dj/image/img_dj1.png"></a></td><td>DJ sound effects</td></tr>
+      <tr><td><a href="kit_drum/index.html"><img src="kit_drum/image/img_snare.png"></a></td><td>Drum sound effects like snare, bass, and cymbal</td></tr>
+      <tr><td><a href="kit_tamori/index.html"><img src="kit_tamori/image/img_daredemo.png"></a></td><td>Tamori phrases</td></tr>
+      <tr><td><a href="kit_greeting/index.html"><img src="kit_greeting/image/img_french.png"></a></td><td>Greeting in different languages like French, Russian, and Japanese</td></tr>
+      <tr><td><a href="kit_scene1/index.html"><img src="kit_scene1/image/img_a1.png"></a></td><td>Lines for scenes</td></tr>
+      <tr><td><a href="kit_ttwister1/index.html"><img src="kit_ttwister1/image/img_rats.png"></a></td><td>Tongue twisters with the R-sound focus</td></tr>
+    </table>
+    </div>
   </div>
   </body>
 </html>
